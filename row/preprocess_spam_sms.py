@@ -3,6 +3,7 @@
 import numpy as np
 from scipy.sparse import csr_matrix
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.datasets import dump_svmlight_file
 
 messages = []
 labels = []
@@ -22,10 +23,8 @@ with open("SMSSpamCollection", "r") as f:
         labels.append(label)
 
 count_vectorizer = CountVectorizer(strip_accents='unicode', stop_words='english')
-
-counts = csr_matrix.todense(count_vectorizer.fit_transform(messages))
+counts = count_vectorizer.fit_transform(messages)
+labels = np.array(labels)
 print "Data shape:", counts.shape
 
-labels = np.array(labels).reshape(-1,1)
-counts = np.concatenate((counts, labels), axis=1)
-np.savetxt("spam-sms-preprocessed-counts.tsv.gz", counts, fmt="%d", delimiter="\t")
+dump_svmlight_file(counts, labels, "spam-sms")

@@ -4,13 +4,13 @@
 
 ## Sources and Preprocessing 
  
-   * Spam-SMS: See `preprocess_spam_sms.sh`
+   * Spam-SMS: See `preprocess_spam_sms.py`
    * Spam-URL: [Original dataset](https://archive.ics.uci.edu/ml/datasets/URL+Reputation)
      with days 1 - 120 aggregated into a single SVM-light file.
 
 ## Format
 
-   * Spam-SMS: Tab-separated file, each cell contains a word count.
+   * Spam-SMS: SVM-light file containing word counts.
    * Spam-URL: SVM-light file containing word counts.
 
 # Contact
