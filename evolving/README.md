@@ -4,11 +4,13 @@
 
 ## Sources and Preprocessing
 
-Original dataset obtained from [StreamSpot](https://github.com/sbustreamspot/sbustreamspot-data). Each
-line (system call) of the original dataset corresponds to shingles that are added and removed from the graph.
-The shingles are obtained by modifying the
-[StreamSpot shingle construction code](https://github.com/sbustreamspot/sbustreamspot-train/tree/master/graphs-to-shingle-vectors).
-The `chunk-length` parameter was set to 50.
+The original dataset was obtained from [StreamSpot](https://github.com/sbustreamspot/sbustreamspot-data). A copy is
+stored in this repository as `streamspot-raw.gz`. Refer to the original repository for details.
+
+Each line (system call) of the original dataset corresponds to
+shingles that are added and removed from a graph. These shingles are obtained by modifying the
+[StreamSpot shingle construction code](https://github.com/sbustreamspot/sbustreamspot-train/tree/master/graphs-to-shingle-vectors)
+with the `chunk-length` parameter set to 50.
 
 Each shingle is mapped to a shingle ID for convenient representation in the SVM-light format, though this is not
 a requirement for xStream. The raw shingles are present in `shingles.gz`, with the shingle ID implied by the line
@@ -16,16 +18,16 @@ number (starting from zero).
 
 ## Format
 
-The evolving stream as incoming and outgoing shingles for each system call are contained in `streamspot-stream.gz`.
+The evolving stream as incoming and outgoing shingles for each system call is contained in `streamspot-stream.gz`.
 The file is in a modified SVM-light format; each line is formatted as follows:
 
 ```
 graph_id incoming_shingle_id:1 incoming_shingle_id:1 ... outgoing_shingle_id:-1 outgoing_shingle_id:-1 ...
 ```
 
-The entire graphs as a row-stream contained in `streamspot-static.gz` for convenience
-(to test with iForest or other static methods). The graph ID is implied by the line number (starting from zero).
-The file is in the SVM-light format, with each line formatted as:
+A row-stream version of the dataset with complete graphs (shingle vectors) is contained in `streamspot-static.gz`
+for convenience (to test with iForest or other static methods). The graph ID is implied by the line number
+(starting from zero). The file is in the SVM-light format, with each line formatted as:
 
 ```
 anomaly_label shingle_id:count shingle_id:count ...
