@@ -5,11 +5,14 @@
 ## Sources and Preprocessing
 
 Original dataset obtained from [StreamSpot](https://github.com/sbustreamspot/sbustreamspot-data). Each
-line (system call) of the original dataset corresponds to a pair of shingles, one added and one removed from the graph.
+line (system call) of the original dataset corresponds to shingles that are added and removed from the graph.
 The shingles are obtained by modifying the
 [StreamSpot shingle construction code](https://github.com/sbustreamspot/sbustreamspot-train/tree/master/graphs-to-shingle-vectors).
-The `chunk-length` parameter was set to 50. Each shingle is mapped to a shingle ID for convenient representation
-in the SVM-light format; xStream can also function with the raw shingles.
+The `chunk-length` parameter was set to 50.
+
+Each shingle is mapped to a shingle ID for convenient representation in the SVM-light format, though this is not
+a requirement for xStream. The raw shingles are present in `shingles.gz`, with the shingle ID implied by the line
+number (starting from zero).
 
 ## Format
 
@@ -17,15 +20,15 @@ The evolving stream as incoming and outgoing shingles for each system call are c
 The file is in a modified SVM-light format; each line is formatted as follows:
 
 ```
-graph_id shingle_id:count shingle_id:count ...
+graph_id incoming_shingle_id:1 incoming_shingle_id:1 ... outgoing_shingle_id:-1 outgoing_shingle_id:-1 ...
 ```
 
-The entire graphs as a row-stream in SVM-light format are contained in `streamspot-static.gz` for convenience
+The entire graphs as a row-stream contained in `streamspot-static.gz` for convenience
 (to test with iForest or other static methods). The graph ID is implied by the line number (starting from zero).
-Each line is formatted as:
+The file is in the SVM-light format, with each line formatted as:
 
 ```
-anomaly_label incoming_shingle_id:1 outgoing_shingle_id:-1
+anomaly_label shingle_id:count shingle_id:count ...
 ```
 
 Graph ID's correspond to scenarios as follows:
