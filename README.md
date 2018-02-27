@@ -7,13 +7,13 @@ The evolving-stream dataset is from [StreamSpot][2].
 
 | Type | Name |
 | --- | --- |
-| *Static* | --- |
-| --- | gisette |
-| --- | isolet |
-| --- | --- |
-| *Evolving stream* | ---  |
-| ---  | Attack-Flash  |
-| ---  | Attack-Java  |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | gisette |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | isolet |
+| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | Spam-SMS |
+| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | Spam-URL |
+| [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) |  |
+| [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Flash  |
+| [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Java  |
 
 
 # Contact
