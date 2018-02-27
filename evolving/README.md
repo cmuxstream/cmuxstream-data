@@ -6,8 +6,10 @@
 
 Original dataset obtained from [StreamSpot](https://github.com/sbustreamspot/sbustreamspot-data). Each
 line (system call) of the original dataset corresponds to a pair of shingles, one added and one removed from the graph.
+
 The shingles are obtained by modifying the
 [StreamSpot shingle construction code](https://github.com/sbustreamspot/sbustreamspot-train/tree/master/graphs-to-shingle-vectors).
+The `chunk-length` parameter was set to 50.
 
 ## Format
 
