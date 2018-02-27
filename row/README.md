@@ -4,7 +4,7 @@
 
 ## Sources and Preprocessing 
  
-   * Spam-SMS: See `spam-sms/preprocess_spam_sms.sh`
+   * Spam-SMS: See `preprocess_spam_sms.sh`
    * Spam-URL: [Original dataset](https://archive.ics.uci.edu/ml/datasets/URL+Reputation)
      with days 1 - 120 aggregated into a single SVM-light file.
 
