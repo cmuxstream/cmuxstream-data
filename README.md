@@ -2,9 +2,6 @@
 
 [https://cmuxstream.github.io](https://cmuxstream.github.io)
 
-The static and row-stream datasets are from the [UCI dataset repository][1].
-The evolving-stream dataset is from [StreamSpot][2].
-
 | Type | Name |
 | --- | --- |
 | [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | gisette |
@@ -20,6 +17,8 @@ The evolving-stream dataset is from [StreamSpot][2].
 | [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Flash  |
 | [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Java  |
 
+
+For further information, see README.md's in the respective folders for each dataset type.
 
 # Contact
 
