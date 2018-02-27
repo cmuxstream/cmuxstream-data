@@ -5,7 +5,7 @@
 ## Sources and Preprocessing
 
 Original dataset obtained from [StreamSpot](https://github.com/sbustreamspot/sbustreamspot-data). Each
-line (shingle) of the original dataset corresponds to a pair of shingles, one added and one removed from the graph.
+line (system call) of the original dataset corresponds to a pair of shingles, one added and one removed from the graph.
 The shingles are obtained by modifying the
 [StreamSpot shingle construction code](https://github.com/sbustreamspot/sbustreamspot-train/tree/master/graphs-to-shingle-vectors).
 
@@ -26,10 +26,10 @@ Graph ID's correspond to scenarios as follows:
    1. YouTube (graph ID's 0 - 99)
    2. GMail (graph ID's 100 - 199)
    3. VGame (graph ID's 200 - 299)
-   4. Flash drive-by-download attack (graph ID's 300 - 399)
+   4. Flash drive-by-download attack (**anomaly**) (graph ID's 300 - 399)
    5. Download (graph ID's 400 - 499)
    6. CNN (graph ID's 500 - 599)
-   7. Java attack (graph ID's 600 - 699)
+   7. Java attack (**anomaly**) (graph ID's 600 - 699)
 
 # Contact
 
