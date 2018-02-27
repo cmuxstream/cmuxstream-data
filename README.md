@@ -7,13 +7,18 @@ The evolving-stream dataset is from [StreamSpot][2].
 
 | Type | Name |
 | --- | --- |
-| *Static* | --- |
-| --- | gisette |
-| --- | isolet |
-| --- | --- |
-| *Evolving stream* | ---  |
-| ---  | Attack-Flash  |
-| ---  | Attack-Java  |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | gisette |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | isolet |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | letter |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | madelon |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | cancer |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | ionosphere |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | telescope |
+| [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | indians |
+| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/row) | Spam-SMS |
+| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/row) | Spam-URL |
+| [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Flash  |
+| [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Java  |
 
 
 # Contact
