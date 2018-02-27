@@ -15,8 +15,8 @@ The evolving-stream dataset is from [StreamSpot][2].
 | [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | ionosphere |
 | [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | telescope |
 | [*Static*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | indians |
-| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | Spam-SMS |
-| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | Spam-URL |
+| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/row) | Spam-SMS |
+| [*Row-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/row) | Spam-URL |
 | [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Flash  |
 | [*Evolving-stream*](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Java  |
 
