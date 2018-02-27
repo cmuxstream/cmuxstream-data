@@ -13,15 +13,20 @@ The `chunk-length` parameter was set to 50.
 
 ## Format
 
-All files are in a modified SVM-light format; each line is formatted as follows:
+The evolving stream as incoming and outgoing shingles for each system call are contained in `streamspot-stream.gz`.
+The file is in a modified SVM-light format; each line is formatted as follows:
 
 ```
-label shingle_id:count shingle_id:count ... graph_id
+graph_id shingle_id:count shingle_id:count ...
 ```
 
-The evolving stream as incoming and outgoing shingles for each system call are contained in `flash-stream.gz` and
-`java-stream.gz`. The entire graphs as a row-stream are contained in `flash-static.gz` and `java-static.gz` for
-convenience (to test with iForest or other static methods).
+The entire graphs as a row-stream in SVM-light format are contained in `streamspot-static.gz` for convenience
+(to test with iForest or other static methods). The graph ID is implied by the line number (starting from zero).
+Each line is formatted as:
+
+```
+anomaly_label shingle_id:count shingle_id:count ...
+```
 
 Graph ID's correspond to scenarios as follows:
 
@@ -32,6 +37,22 @@ Graph ID's correspond to scenarios as follows:
    5. Download (graph ID's 400 - 499)
    6. CNN (graph ID's 500 - 599)
    7. Java attack (**anomaly**) (graph ID's 600 - 699)
+
+## Example
+
+The included `test_iforest_streamspot.py` script runs iForest on the StreamSpot datasets, testing detection of either
+the Flash or Java attack against one or all benign scenarios. See the above section for the mapping from
+scenario numbers to benign scenarios.
+
+```
+python test_iforest_streamspot.py <path to streamspot-static> <attack, "flash" or "java"> <scenario, index or "all">
+```
+
+Example runs:
+```
+python test_iforest_streamspot.py ./streamspot-static java all # Java vs. all
+python test_iforest_streamspot.py ./streamspot-static flash 5 # Flash vs. Download
+```
 
 # Contact
 
