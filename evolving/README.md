@@ -8,7 +8,8 @@ Original dataset obtained from [StreamSpot](https://github.com/sbustreamspot/sbu
 line (system call) of the original dataset corresponds to a pair of shingles, one added and one removed from the graph.
 The shingles are obtained by modifying the
 [StreamSpot shingle construction code](https://github.com/sbustreamspot/sbustreamspot-train/tree/master/graphs-to-shingle-vectors).
-The `chunk-length` parameter was set to 50.
+The `chunk-length` parameter was set to 50. Each shingle is mapped to a shingle ID for convenient representation
+in the SVM-light format; xStream can also function with the raw shingles.
 
 ## Format
 
@@ -24,7 +25,7 @@ The entire graphs as a row-stream in SVM-light format are contained in `streamsp
 Each line is formatted as:
 
 ```
-anomaly_label shingle_id:count shingle_id:count ...
+anomaly_label incoming_shingle_id:1 outgoing_shingle_id:-1
 ```
 
 Graph ID's correspond to scenarios as follows:
