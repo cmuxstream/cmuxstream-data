@@ -4,6 +4,8 @@
 
 [https://cmuxstream.github.io](https://cmuxstream.github.io)
 
+For further information, see README.md's in the respective folders for each dataset type.
+
 | Type | Name |
 | --- | --- |
 | [Static](https://github.com/cmuxstream/cmuxstream-data/tree/master/static) | gisette |
@@ -18,9 +20,6 @@
 | [Row-stream](https://github.com/cmuxstream/cmuxstream-data/tree/master/row) | Spam-URL |
 | [Evolving-stream](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Flash  |
 | [Evolving-stream](https://github.com/cmuxstream/cmuxstream-data/tree/master/evolving) | Attack-Java  |
-
-
-For further information, see README.md's in the respective folders for each dataset type.
 
 # Contact
 
