@@ -2,6 +2,8 @@
 
 [https://cmuxstream.github.io](https://cmuxstream.github.io)
 
+**Link to streamspot-stream.gz**: https://drive.google.com/file/d/1EUHiHYyitSrMuVQGvd8ns5ZIvJT7q7bb/view?usp=sharing
+
 ## Sources and Preprocessing
 
 The original dataset was obtained from [StreamSpot](https://github.com/sbustreamspot/sbustreamspot-data). A copy is
